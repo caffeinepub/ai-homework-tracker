@@ -31,8 +31,10 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import AppDetailsQR from "./AppDetailsQR";
 import AssignmentCard from "./AssignmentCard";
 import AssignmentModal from "./AssignmentModal";
+import SubscriptionSection from "./SubscriptionSection";
 
 const SEED_KEY = "homework_tracker_seeded_v1";
 
@@ -232,6 +234,9 @@ export default function Dashboard() {
           ))}
         </section>
 
+        {/* Subscription section */}
+        <SubscriptionSection />
+
         {/* Filter bar */}
         <section
           className="mb-5 flex flex-wrap items-center gap-3"
@@ -331,6 +336,9 @@ export default function Dashboard() {
             </AnimatePresence>
           )}
         </section>
+
+        {/* App Details QR */}
+        <AppDetailsQR />
       </main>
 
       {/* Footer */}
